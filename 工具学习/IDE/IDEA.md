@@ -8,5 +8,7 @@
 
 自动修正：alt+enter
 
+查看源码：ctrl+alt+b
+
 
 
