@@ -173,11 +173,99 @@ MyBatis在使用代理dao的方式实现增删改查时做什么事呢？
 
 mappers配置文件的几个标签（<if> <where><foreach><sql>）
 
+### if标签
+
+```xml
+<select id="findByUser" resultType="user" parameterType="user">
+    select * from user where 1=1
+    <if test="username!=null and username != '' ">
+    and username like #{username}
+    </if> <if test="address != null">
+    and address like #{address}
+    </if>
+</select>
+```
+
+> where 1=1的作用：
+>
+> 1=1永真，主要用来构件动态SQL,为了防止多条件SQL中只出现where子句的情况，从而导致SQL出错
+>
+> 1<>1永假，用于只取结构而不取数据的场合
+
+### where标签
+
+为了简化上面where 1=1 的条件封装，我们可采用用<where>标签来简化开发
+
+```xml
+<select id="findByUser" resultType="user" parameterType="user"> 
+    <include refid="defaultSql"></include> 
+    <where> 
+        <if test="username!=null and username != '' ">
+            and username like #{username}
+        </if> 
+        <if test="address != null">
+    		and address like #{address}
+    	</if>
+    </where>
+</select>
+```
+
+### foreach标签
+
+```xml
+<!-- 查询所有用户在 id 的集合之中 --> 
+<select id="findInIds" resultType="user" parameterType="queryvo">
+<!-- select * from user where id in (1,2,3,4,5); --> 
+    <include refid="defaultSql"></include> 
+    <where> 
+        <if test="ids != null and ids.size() > 0"> 
+            <foreach collection="ids" open="id in ( " close=")" item="uid" separator=",">
+            	#{uid}
+            </foreach>
+		</if>
+	</where>
+</select>
+SQL 语句：
+select 字段 from user where id in (?)
+<foreach>标签用于遍历集合，它的属性：
+    collection:代表要遍历的集合元素，注意编写时不要写#{}
+    open:代表语句的开始部分
+    close:代表结束部分
+```
+
+#### include sql 标签
+
+MyBatis中对于重复的Sql，可以使用include标签引用，最终达到重用的目的
+
+```xml
+<sql id="defaultSql">
+    select * from user
+</sql>
+```
+
+```xml
+<select id="findAll" resultType="user">
+    <include refid="defaultSql"></include>
+</select>
+```
+
+
+
 ## 6、mybatis多表操作（掌握）
 
 表之间的关系：一对一，一对多，多对一，多对多
 
+多对一：
 
+> 方式一、使用专门的po类作为输出类型，其中定了sql查询结果集所有的字段
+>
+> 方式二、使用resultMap，定义专门的resultMap用于映射一对一的结果（如定义相关dto）
+
+一对多：
+
+>collection 是用于建立一对多中集合属性的对应关系
+>
+>ofType 用于指定集合元素的数据类型
 
 ## 7、mybatis延迟加载策略
 
@@ -194,6 +282,14 @@ mappers配置文件的几个标签（<if> <where><foreach><sql>）
 >坏处：因为只有当需要用到数据时，才会进行数据库查询，这样在大批量数据查询时，因为查询工作也要消耗时间，所以可能造成用户等待时间变长，造成用户体验下降。
 
 **实现方法**
+
+我们需要在 Mybatis 的配置文件 SqlMapConfig.xml 文件中添加延迟加载的配置。
+
+```xml
+<!-- 开启延迟加载的支持 -->
+<setting name="lazyLoadingEnabled" value="true"/>
+<setting name="aggressiveLazyLoading" value="false"/>
+```
 
 1、使用`assocation`实现延迟加载
 
@@ -307,9 +403,33 @@ MyBatis 中的sql标签定义SQL片段。
 
 include标签引用，可以复用SQL片段
 
+## 10、MyBatis常用注解
 
+@Insert：实现新增
 
+@Update：实现更新
 
+@Delete：实现删除
+
+@Select：实现查询
+
+@Result：实现结果集封装
+
+@Results：实现多个结果集封装
+
+@ResultMap：实现引用@Results定义的封装
+
+@One：实现一对一结果的封装集
+
+@Many：实现一对多结果的封装集
+
+@SelectProvider：实现动态SQL映射
+
+@CacheNamesapce：实现注解二级缓存的使用
+
+面试题：
+
+https://blog.csdn.net/ThinkWon/article/details/101292950
 
 
 
