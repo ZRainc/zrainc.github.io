@@ -1,13 +1,10 @@
-[![logo](https://github.com/macrozheng/mall-learning/raw/master/docs/images/mall.svg)](https://github.com/macrozheng/mall-learning/blob/master/docs/images/mall.svg)
+[![logo](https://github.com/ZRainc/zrainc.github.io/blob/master/image/zrainc.png)](https://github.com/ZRainc/zrainc.github.io/blob/master/image/zrainc.png)
 
-# mall-learning
+# zrainc-blog
 
-> mall学习教程，架构、业务、技术要点全方位解析。
+> 全栈程序员学习笔记
 
-mall项目（39k+star）是一套电商系统，使用现阶段主流技术实现。
-涵盖了SpringBoot 2.3.0、MyBatis 3.4.6、Elasticsearch 7.6.2、
-RabbitMQ 3.7.15、Redis 5.0、MongoDB 4.2.5、Mysql5.7等技术，
-采用Docker容器化部署。
+zrainc是一个涵盖前后端全技术栈的博客笔记网站。
 
-[GitHub](https://github.com/ZRainc/zrainc.github.io) [Get Started](https://github.com/macrozheng/mall-learning/blob/master/docs/README.md)
+[GitHub](https://github.com/ZRainc/zrainc.github.io/blob/master) [Get Started](https://github.com/ZRainc/zrainc.github.io/blob/master/README.md)
 
