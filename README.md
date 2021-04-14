@@ -8,27 +8,12 @@ zrainc是一个涵盖前后端全技术栈的博客笔记网站。
 
 ## 项目地址
 
-- 后台项目：https://github.com/macrozheng/mall
-- 前端项目：https://github.com/macrozheng/mall-admin-web
-- 微服务项目：https://github.com/macrozheng/mall-swarm
+- github：https://github.com/ZRainc/zrainc.github.io/tree/master
 
 ## 序章
 
 - [mall架构及功能概览](https://github.com/macrozheng/mall-learning/blob/master/docs/foreword/mall_foreword_01.md)
 - [mall学习所需知识点（推荐资料）](https://github.com/macrozheng/mall-learning/blob/master/docs/foreword/mall_foreword_02.md)
 
-## 架构篇
-
-> 手把手教你搭建一个mall在使用的项目骨架
-
-- [mall整合SpringBoot+MyBatis搭建基本骨架](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_01.md)
-- [mall整合Swagger-UI实现在线API文档](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_02.md)
-- [mall整合Redis实现缓存功能](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_03.md)
-- [mall整合SpringSecurity和JWT实现认证和授权（一）](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_04.md)
-- [mall整合SpringSecurity和JWT实现认证和授权（二）](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_05.md)
-- [mall整合SpringTask实现定时任务](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_06.md)
-- [mall整合Elasticsearch实现商品搜索](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_07.md)
-- [mall整合Mongodb实现文档操作](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_08.md)
-- [mall整合RabbitMQ实现延迟消息](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_09.md)
-- [mall整合OSS实现文件上传](https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_10.md)
+- https://github.com/macrozheng/mall-learning/blob/master/docs/architect/mall_arch_10.md)
 
