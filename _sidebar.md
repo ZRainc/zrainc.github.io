@@ -1,4 +1,4 @@
-- [Java基础](https://github.com/ZRainc/zrainc.github.io/blob/master/Java/Java%E5%9F%BA%E7%A1%80.md)
+- [Java基础](https://zrainc.github.io/#/Java/Java%E5%9F%BA%E7%A1%80.md)
   - [Java基础](https://github.com/ZRainc/zrainc.github.io/blob/master/Java/Java%E5%9F%BA%E7%A1%80.md)
 - [Java集合](https://github.com/ZRainc/zrainc.github.io/blob/master/Java/Java%E5%9F%BA%E7%A1%80.md)
 - [Java异常](https://github.com/ZRainc/zrainc.github.io/blob/master/Java/Java%E5%9F%BA%E7%A1%80.md)
