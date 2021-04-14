@@ -1,4 +1,4 @@
-[![logo](https://github.com/ZRainc/zrainc.github.io/blob/master/image/zrainc.png)](https://github.com/ZRainc/zrainc.github.io/blob/master/image/zrainc.png)
+![](https://github.com/ZRainc/zrainc.github.io/blob/master/image/zrainc.svg)
 
 # zrainc-blog
 
